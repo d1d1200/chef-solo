@@ -1,0 +1,14 @@
+Encoding:
+  Enabled: false
+
+LineLength:
+  Max: 300
+
+IfUnlessModifier:
+  Enabled: false
+
+MethodLength:
+  Max: 11
+
+TrivialAccessors:
+  ExactNameMatch: true

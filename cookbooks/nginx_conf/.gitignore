@@ -1,0 +1,22 @@
+.vagrant
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+/cookbooks
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+.cache
+.rvmrc
+.ruby-version
+.ruby-gemset
+.kitchen
+
+.kitchen/
+.kitchen.local.yml

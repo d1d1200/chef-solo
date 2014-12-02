@@ -1,0 +1,15 @@
+soloers/*
+/berkshelf
+/berkshelf/*
+nodes/*
+roles/*
+roles/
+
+.vagrant
+# Bundler
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+.DS_Store
+*.pem
