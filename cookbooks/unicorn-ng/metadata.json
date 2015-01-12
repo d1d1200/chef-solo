@@ -29,5 +29,5 @@
     "unicorn-ng": "Configures unicorn.rb and sets up a service according to attributes; modified on service part to include some environment variables",
     "unicorn-ng::install": "Installs bundler and unicorn using rubygems"
   },
-  "version": "0.3.4"
+  "version": "0.3.9"
 }

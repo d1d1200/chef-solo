@@ -51,6 +51,36 @@ export DEVISE_SECRET_KEY="<%= @devise_secret_key %>"
 <% if @paperclip_hash_secret %>
 export PAPERCLIP_HASH_SECRET="<%= @paperclip_hash_secret %>"
 <% end -%>
+<% if @asiapay_secure_hash_secret %>
+export ASIAPAY_SECURE_HASH_SECRET="<%= @asiapay_secure_hash_secret %>"
+<% end -%>
+<% if @redis_password %>
+export REDIS_PASSWORD="<%= @redis_password %>"
+<% end -%>
+<% if @adyen_notify_user %>
+export ADYEN_NOTIFY_USER="<%= @adyen_notify_user %>"
+<% end -%>
+<% if @adyen_notify_passwd %>
+export ADYEN_NOTIFY_PASSWD="<%= @adyen_notify_passwd %>"
+<% end -%>
+<% if @elasticsearch_url %>
+export ELASTICSEARCH_URL="<%= @elasticsearch_url %>"
+<% end -%>
+<% if @dropbox_token %>
+export DROPBOX_TOKEN="<%= @dropbox_token %>"
+<% end -%>
+<% if @dropbox_secret %>
+export DROPBOX_SECRET="<%= @dropbox_secret %>"
+<% end -%>
+<% if @dropbox_app_key %>
+export DROPBOX_APP_KEY="<%= @dropbox_app_key %>"
+<% end -%>
+<% if @dropbox_app_secret %>
+export DROPBOX_APP_SECRET="<%= @dropbox_app_secret %>"
+<% end -%>
+<% if @logentries_token %>
+export LOGENTRIES_TOKEN="<%= @logentries_token %>"
+<% end -%>
 
 PIDFILE="<%= @pidfile %>"
 USER="<%= @user %>"
@@ -125,7 +155,7 @@ case "$1" in
     ;;
 
   upgrade)
-    if sig USR2 && sleep 3
+    if sig USR2 && sleep 5
     then
       n=$TIMEOUT
       while test -s $OLD_PIN && test $n -ge 0
@@ -151,7 +181,7 @@ case "$1" in
 
   full-restart)
     $0 stop
-    sleep 1
+    sleep 3
     $0 start
     ;;
 

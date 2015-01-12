@@ -14,7 +14,44 @@ server {
 
     # Pass requests to backend <%= node.nginx[:be_bename] %>
     proxy_pass http://<%= node.nginx[:be_backend] rescue 'localhost' %>:<%= node.nginx[:be_backend_port] rescue '8000' %>;
+    proxy_set_header X-Forwarded-Proto $scheme;
     proxy_redirect off;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header  X-Real-IP  $remote_addr;
+    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header  Host $http_host;
+##  try_files $uri $uri/index.html $uri.html @<%= node.nginx[:be_bename] %>;
+
+    # For CORS Ajax
+    proxy_pass_header Access-Control-Allow-Origin;
+    proxy_pass_header Access-Control-Allow-Methods;
+    proxy_hide_header Access-Control-Allow-Headers;
+    add_header Access-Control-Allow-Headers 'X-Requested-With, Content-Type';
+    add_header Access-Control-Allow-Credentials true;
+
+  }
+}
+
+server {
+  listen   443;
+  server_name   <%= node.nginx[:be_servername] %>;
+  ssl on;
+  ssl_certificate /etc/nginx/ssl/allcert.crt;
+  ssl_certificate_key /etc/nginx/ssl/server.key;
+  #enables SSLv3/TLSv1, but not SSLv2 which is weak and should no longer be used.
+  ssl_protocols  TLSv1;
+    # Disables all weak ciphers
+  ssl_ciphers ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM;
+  error_log   <%= node.nginx[:be_log_dir] %>/<%= node.nginx[:be_bename] %>-errors.log;
+  access_log  <%= node.nginx[:be_log_dir] %>/<%= node.nginx[:be_bename] %>-access.log;
+
+  location <%= node.nginx[:be_location] %> {
+
+    # Pass requests to backend <%= node.nginx[:be_bename] %>
+    proxy_pass http://<%= node.nginx[:be_backend] rescue 'localhost' %>:<%= node.nginx[:be_backend_port] rescue '8000' %>;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect off;
+    proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header  X-Real-IP  $remote_addr;
     proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header  Host $http_host;

@@ -18,6 +18,10 @@
 #
 
 potentially_at_compile_time do
+	execute "apt-get-update" do
+  	command "apt-get update"
+  	ignore_failure true
+	end
   package 'autoconf'
   package 'binutils-doc'
   package 'bison'
@@ -25,5 +29,4 @@ potentially_at_compile_time do
   package 'flex'
   package 'gettext'
   package 'ncurses-dev'
-  package 'ntp'
 end

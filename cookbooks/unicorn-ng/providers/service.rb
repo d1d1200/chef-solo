@@ -51,7 +51,17 @@ action :create do
                 aws_access_key_id:  new_resource.aws_access_key_id,
                 aws_secret_access_key:  new_resource.aws_secret_access_key,
                 devise_secret_key:  new_resource.devise_secret_key,
-                paperclip_hash_secret: new_resource.paperclip_hash_secret
+                paperclip_hash_secret: new_resource.paperclip_hash_secret,
+                asiapay_secure_hash_secret: new_resource.asiapay_secure_hash_secret,
+                redis_password: new_resource.redis_password,
+                adyen_notify_user: new_resource.adyen_notify_user,
+                adyen_notify_passwd: new_resource.adyen_notify_passwd,
+                elasticsearch_url: new_resource.elasticsearch_url,
+                dropbox_token: new_resource.dropbox_token,
+                dropbox_secret: new_resource.dropbox_secret,
+                dropbox_app_key: new_resource.dropbox_app_key,
+                dropbox_app_secret: new_resource.dropbox_app_secret,
+                logentries_token: new_resource.logentries_token
 
     else
       variables new_resource.variables

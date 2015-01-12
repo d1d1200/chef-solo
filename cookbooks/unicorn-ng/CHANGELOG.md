@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of unicorn.
 
+## 0.3.9:
+* logentries token
+
+## 0.3.5-0.3.8:
+* add elastic search and dropbox url
+
 ## 0.3.4:
 * Support customized environment on init script (unicorn service)
 * Usage on attributes: 

@@ -27,6 +27,5 @@ potentially_at_compile_time do
   package 'kernel-devel'
   package 'make'
   package 'm4'
-  package 'ntp'
   package 'ncurses-devel'
 end
