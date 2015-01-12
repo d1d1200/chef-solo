@@ -46,6 +46,7 @@ action :create do
                 app_root:       new_resource.app_root,
                 set_env:        new_resource.set_env,
                 x_spree_client_token:   new_resource.x_spree_client_token,
+                x_spree_client_token2:   new_resource.x_spree_client_token2,
                 s3_bucket:      new_resource.s3_bucket,
                 cloudfront_url:   new_resource.cloudfront_url,
                 aws_access_key_id:  new_resource.aws_access_key_id,

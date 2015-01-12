@@ -42,6 +42,7 @@ attribute :service_name,   kind_of: String, default: node['unicorn-ng']['service
 attribute :app_root,   	   kind_of: String, default: node['unicorn-ng']['service']['app_root']
 attribute :set_env,    	   kind_of: String, default: node['unicorn-ng']['service']['set_env']
 attribute :x_spree_client_token,    	   kind_of: String, default: node['unicorn-ng']['service']['x_spree_client_token']
+attribute :x_spree_client_token2,    	   kind_of: String, default: node['unicorn-ng']['service']['x_spree_client_token2']
 attribute :s3_bucket,	kind_of: String, default: node['unicorn-ng']['service']['s3_bucket']
 attribute :cloudfront_url,	kind_of: String, default: node['unicorn-ng']['service']['cloudfront_url']
 attribute :aws_access_key_id,	kind_of: String, default: node['unicorn-ng']['service']['aws_access_key_id']

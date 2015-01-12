@@ -33,6 +33,9 @@ COMMAND="$DAEMON -- $DAEMON_OPTS"
 <% if @x_spree_client_token %>
 export X_SPREE_CLIENT_TOKEN="<%= @x_spree_client_token %>"
 <% end -%>
+<% if @x_spree_client_token2 %>
+export X_SPREE_CLIENT_TOKEN2="<%= @x_spree_client_token2 %>"
+<% end -%>
 <% if @s3_bucket %>
 export S3_BUCKET="<%= @s3_bucket %>"
 <% end -%>
