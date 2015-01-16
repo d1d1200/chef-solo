@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of unicorn.
 
+## 0.3.11:
+* SMTP settings
+
 ## 0.3.9:
 * logentries token
 

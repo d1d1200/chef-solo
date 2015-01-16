@@ -84,6 +84,20 @@ bash "Add more symlinks" do
   EOT
 end
 
+logrotate_app "#{node[:chef_ruby][:logrotate_name]}" do
+  cookbook "logrotate"
+  path "#{node[:chef_ruby][:logrotate_path]}"
+  frequency "daily"
+  rotate 5
+  su "#{node[:chef_ruby][:logrotate_su]}"
+  size "#{node[:chef_ruby][:logrotate_size]}"
+  template_mode "#{node[:chef_ruby][:logrotate_tmpmode]}"
+  compress
+  delaycompress
+  notifempty
+  copytruncate
+end
+
 ohai "reload" do
   action :reload
 end

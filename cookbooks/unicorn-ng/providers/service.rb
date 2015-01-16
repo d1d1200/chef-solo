@@ -62,7 +62,11 @@ action :create do
                 dropbox_secret: new_resource.dropbox_secret,
                 dropbox_app_key: new_resource.dropbox_app_key,
                 dropbox_app_secret: new_resource.dropbox_app_secret,
-                logentries_token: new_resource.logentries_token
+                logentries_token: new_resource.logentries_token,
+                smtp_username: new_resource.smtp_username,
+                smtp_password: new_resource.smtp_password,
+                smtp_address: new_resource.smtp_address,
+                smtp_domain: new_resource.smtp_domain
 
     else
       variables new_resource.variables

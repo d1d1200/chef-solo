@@ -59,4 +59,8 @@ attribute :dropbox_secret,	kind_of: String, default: node['unicorn-ng']['service
 attribute :dropbox_app_key,	kind_of: String, default: node['unicorn-ng']['service']['dropbox_app_key']
 attribute :dropbox_app_secret,	kind_of: String, default: node['unicorn-ng']['service']['dropbox_app_secret']
 attribute :logentries_token,	kind_of: String, default: node['unicorn-ng']['service']['logentries_token']
+attribute :smtp_password,	kind_of: String, default: node['unicorn-ng']['service']['smtp_password']
+attribute :smtp_username,	kind_of: String, default: node['unicorn-ng']['service']['smtp_username']
+attribute :smtp_address,	kind_of: String, default: node['unicorn-ng']['service']['smtp_address']
+attribute :smtp_domain,	kind_of: String, default: node['unicorn-ng']['service']['smtp_domain']
 

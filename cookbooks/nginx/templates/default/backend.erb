@@ -2,7 +2,11 @@
 
 upstream <%= node.nginx[:be_bename] %> {
     server <%= node.nginx[:be_backend] rescue 'localhost' %>:<%= node.nginx[:be_backend_port] rescue '8000' %> weight=1 fail_timeout=0;
+    
+    <% if @be_backend1 %>
     server <%= node.nginx[:be_backend1] rescue 'localhost' %>:<%= node.nginx[:be_backend1_port] rescue '8000' %> weight=1 fail_timeout=0;
+    <% end -%>
+
 }
 
 server {

@@ -29,5 +29,5 @@
   "recipes": {
     "default": "Installs Ruby 2.1 from source."
   },
-  "version": "2.3.0"
+  "version": "2.3.1"
 }

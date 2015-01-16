@@ -84,6 +84,18 @@ export DROPBOX_APP_SECRET="<%= @dropbox_app_secret %>"
 <% if @logentries_token %>
 export LOGENTRIES_TOKEN="<%= @logentries_token %>"
 <% end -%>
+<% if @smtp_password %>
+export SMTP_PASSWORD="<%= @smtp_password %>"
+<% end -%>
+<% if @smtp_username %>
+export SMTP_USERNAME="<%= @smtp_username %>"
+<% end -%>
+<% if @smtp_address %>
+export SMTP_ADDRESS="<%= @smtp_address %>"
+<% end -%>
+<% if @smtp_domain %>
+export SMTP_DOMAIN="<%= @smtp_domain %>"
+<% end -%>
 
 PIDFILE="<%= @pidfile %>"
 USER="<%= @user %>"
