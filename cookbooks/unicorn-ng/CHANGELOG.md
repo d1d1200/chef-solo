@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of unicorn.
 
+## 0.3.13:
+* DB variables
+
+## 0.3.12:
+* mix panel
+* memcached
+* parse
+
 ## 0.3.11:
 * SMTP settings
 

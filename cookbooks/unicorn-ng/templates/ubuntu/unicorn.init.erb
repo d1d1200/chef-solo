@@ -96,6 +96,48 @@ export SMTP_ADDRESS="<%= @smtp_address %>"
 <% if @smtp_domain %>
 export SMTP_DOMAIN="<%= @smtp_domain %>"
 <% end -%>
+<% if @mixpanel_token %>
+export MIXPANEL_TOKEN="<%= @mixpanel_token %>"
+<% end -%>
+<% if @parse_application_id %>
+export PARSE_APPLICATION_ID="<%= @parse_application_id %>"
+<% end -%>
+<% if @parse_rest_api_key %>
+export PARSE_REST_API_KEY="<%= @parse_rest_api_key %>"
+<% end -%>
+<% if @secret_key_base %>
+export SECRET_KEY_BASE="<%= @secret_key_base %>"
+<% end -%>
+<% if @memcached_url %>
+export MEMCACHED_URL="<%= @memcached_url %>"
+<% end -%>
+<% if @memcached_username %>
+export MEMCACHED_USERNAME="<%= @memcached_username %>"
+<% end -%>
+<% if @memcached_password %>
+export MEMCACHED_PASSWORD="<%= @memcached_password %>"
+<% end -%>
+<% if @dev_db_name %>
+export DEV_DB_NAME="<%= @dev_db_name %>"
+<% end -%>
+<% if @dev_db_username %>
+export DEV_DB_USERNAME="<%= @dev_db_username %>"
+<% end -%>
+<% if @rds_db_name %>
+export RDS_DB_NAME="<%= @rds_db_name %>"
+<% end -%>
+<% if @rds_username %>
+export RDS_USERNAME="<%= @rds_username %>"
+<% end -%>
+<% if @rds_password %>
+export RDS_PASSWORD="<%= @rds_password %>"
+<% end -%>
+<% if @rds_hostname %>
+export RDS_HOSTNAME="<%= @rds_hostname %>"
+<% end -%>
+<% if @rds_port %>
+export RDS_PORT="<%= @rds_port %>"
+<% end -%>
 
 PIDFILE="<%= @pidfile %>"
 USER="<%= @user %>"

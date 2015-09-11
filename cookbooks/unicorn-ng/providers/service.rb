@@ -66,8 +66,21 @@ action :create do
                 smtp_username: new_resource.smtp_username,
                 smtp_password: new_resource.smtp_password,
                 smtp_address: new_resource.smtp_address,
-                smtp_domain: new_resource.smtp_domain
-
+                smtp_domain: new_resource.smtp_domain,
+                mixpanel_token: new_resource.mixpanel_token,
+                parse_application_id: new_resource.parse_application_id,
+                parse_rest_api_key: new_resource.parse_rest_api_key,
+                secret_key_base: new_resource.secret_key_base,
+                memcached_url: new_resource.memcached_url,
+                memcached_username: new_resource.memcached_username,
+                memcached_password: new_resource.memcached_password,
+                dev_db_name: new_resource.dev_db_name,
+                dev_db_username: new_resource.dev_db_username,
+                rds_db_name: new_resource.rds_db_name,
+                rds_username: new_resource.rds_username,
+                rds_password:  new_resource.rds_password,
+                rds_hostname: new_resource.rds_hostname,
+                rds_port: new_resource.rds_port
     else
       variables new_resource.variables
     end

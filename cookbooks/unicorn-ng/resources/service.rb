@@ -63,4 +63,20 @@ attribute :smtp_password,	kind_of: String, default: node['unicorn-ng']['service'
 attribute :smtp_username,	kind_of: String, default: node['unicorn-ng']['service']['smtp_username']
 attribute :smtp_address,	kind_of: String, default: node['unicorn-ng']['service']['smtp_address']
 attribute :smtp_domain,	kind_of: String, default: node['unicorn-ng']['service']['smtp_domain']
+attribute :mixpanel_token,	kind_of: String, default: node['unicorn-ng']['service']['mixpanel_token']
+attribute :parse_application_id,	kind_of: String, default: node['unicorn-ng']['service']['parse_application_id']
+attribute :parse_rest_api_key,	kind_of: String, default: node['unicorn-ng']['service']['parse_rest_api_key']
+attribute :secret_key_base,	kind_of: String, default: node['unicorn-ng']['service']['secret_key_base']
+attribute :memcached_url,	kind_of: String, default: node['unicorn-ng']['service']['memcached_url']
+attribute :memcached_username,	kind_of: String, default: node['unicorn-ng']['service']['memcached_username']
+attribute :memcached_password,	kind_of: String, default: node['unicorn-ng']['service']['memcached_password']
+attribute :dev_db_name,	kind_of: String, default: node['unicorn-ng']['service']['dev_db_name']
+attribute :dev_db_username,	kind_of: String, default: node['unicorn-ng']['service']['dev_db_username']
+attribute :rds_db_name,	kind_of: String, default: node['unicorn-ng']['service']['rds_db_name']
+attribute :rds_username,	kind_of: String, default: node['unicorn-ng']['service']['rds_username']
+attribute :rds_password,	kind_of: String, default: node['unicorn-ng']['service']['rds_password']
+attribute :rds_hostname,	kind_of: String, default: node['unicorn-ng']['service']['rds_hostname']
+attribute :rds_port,	kind_of: String, default: node['unicorn-ng']['service']['rds_port']
+
+
 
