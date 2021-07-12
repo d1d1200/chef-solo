@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     aws-eventstream (1.1.1)
     aws-partitions (1.457.0)
@@ -203,6 +203,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.4-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.11.4-x86_64-linux)
+      racc (~> 1.4)
     nori (2.6.0)
     octokit (4.21.0)
       faraday (>= 0.9)
@@ -311,6 +313,7 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   berkshelf (>= 2.0.18)
