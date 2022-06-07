@@ -134,7 +134,7 @@ GEM
     httpclient (2.8.3)
     iniparse (1.5.0)
     ipaddress (0.8.3)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     json (2.5.1)
     knife-azure (3.0.6)
       azure_mgmt_compute (~> 0.18, >= 0.18.3)
@@ -202,6 +202,8 @@ GEM
     nokogiri (1.11.4-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.11.4-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.4-x86_64-linux)
       racc (~> 1.4)
     nori (2.6.0)
     octokit (4.21.0)
@@ -311,6 +313,7 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   berkshelf (>= 2.0.18)
